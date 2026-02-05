@@ -57,19 +57,19 @@ A clear, professional README for the frontend of the DB6 project. This file docu
 Below are all images currently in `Frontend/Images`. Each image is shown as a preview and links to the full file.
 
 <p align="center">
-  <a href="Frontend/Images/1.jpg"><img src="Frontend/Images/1.jpg" alt="1.jpg" width="360" /></a>
+  <a href="./Images/1.jpg"><img src="./Images/1.jpg" alt="1.jpg" width="360" /></a>
   &nbsp;&nbsp;
-  <a href="Frontend/Images/2.jpg"><img src="Frontend/Images/2.jpg" alt="2.jpg" width="360" /></a>
+  <a href="./Images/2.jpg"><img src="./Images/2.jpg" alt="2.jpg" width="360" /></a>
 </p>
 
 <p align="center">
-  <a href="Frontend/Images/3.jpg"><img src="Frontend/Images/3.jpg" alt="3.jpg" width="360" /></a>
+  <a href="./Images/3.jpg"><img src="./Images/3.jpg" alt="3.jpg" width="360" /></a>
   &nbsp;&nbsp;
-  <a href="Frontend/Images/4.jpg"><img src="Frontend/Images/4.jpg" alt="4.jpg" width="360" /></a>
+  <a href="./Images/4.jpg"><img src="./Images/4.jpg" alt="4.jpg" width="360" /></a>
 </p>
 
 <p align="center">
-  <a href="Frontend/Images/5.jpg"><img src="Frontend/Images/5.jpg" alt="5.jpg" width="360" /></a>
+  <a href="./Images/5.jpg"><img src="./Images/5.jpg" alt="5.jpg" width="360" /></a>
 </p>
 
 Captions:

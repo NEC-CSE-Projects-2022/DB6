@@ -29,7 +29,7 @@ Figures
 
 Image1: TEXT TO IMAGE 
 
-<img width="715" height="575" alt="image" src="https://github.com/user-attachments/assets/263000ad-a94a-4eee-85f0-240f85667e97" />
+<img width="420" height="337" alt="image" src="https://github.com/user-attachments/assets/69380410-8e0d-4f20-8133-a8cfe0dfc109" />
 
 - Figure 1 — Text-to-Image Generation Pipeline (images/figure1.png)
   - Shows: Data load → Preprocessing → Stable Diffusion Model → Prompt → Image.
@@ -37,7 +37,7 @@ Image1: TEXT TO IMAGE
  
 Image2: IMAGE TO IMAGE 
 
-<img width="447" height="548" alt="image" src="https://github.com/user-attachments/assets/cb78adcd-3433-42b2-b27a-83acf257ac1d" />
+<img width="372" height="367" alt="image" src="https://github.com/user-attachments/assets/5c58e48e-627a-41c8-9a6c-b06dd7392e5a" />
 
 
 - Figure 2 — Semantic Image Retrieval Pipeline (images/figure2.png)
@@ -135,4 +135,5 @@ Notes & next steps
 Contact & maintainers
 - Maintainer: formystudiesbtech@gmail.com
 - Last updated: 2026-02-05
+
 

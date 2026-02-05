@@ -26,9 +26,19 @@ Repository contents
   - images/figure2.png (semantic retrieval flowchart — Image 2)
 
 Figures
+
+Image1: TEXT TO IMAGE 
+
+<img width="715" height="575" alt="image" src="https://github.com/user-attachments/assets/263000ad-a94a-4eee-85f0-240f85667e97" />
+
 - Figure 1 — Text-to-Image Generation Pipeline (images/figure1.png)
   - Shows: Data load → Preprocessing → Stable Diffusion Model → Prompt → Image.
   - This diagram corresponds to the text-to-image generation part where prompts are converted into 512×512 outputs by Stable Diffusion v1.5.
+ 
+Image2: IMAGE TO IMAGE 
+
+<img width="447" height="548" alt="image" src="https://github.com/user-attachments/assets/cb78adcd-3433-42b2-b27a-83acf257ac1d" />
+
 
 - Figure 2 — Semantic Image Retrieval Pipeline (images/figure2.png)
   - Shows: User uploads image → Preprocess → YOLOv8 detects & crops objects → CLIP (ViT-B/32) extracts features ��� FAISS search returns top-k similar images.
@@ -113,14 +123,7 @@ Security, privacy & licensing notes
 - Models like Stable Diffusion and CLIP are subject to their respective licenses — check and follow model license terms when redistributing or serving generated content.
 - Choose a repository license in README (e.g., CC-BY for documents, MIT/Apache for code) and add a LICENSE file.
 
-Citations
-- If you use or reference results from this work, cite the camera-ready paper:
-  - Authors: [ADD AUTHORS]
-  - Title: [ADD TITLE]
-  - Venue: [ADD VENUE]
-  - Year: [ADD YEAR]
-  - DOI / URL: [ADD DOI/URL]
-- Tell me authors/title/venue/year if you want a BibTeX entry generated and added to this README.
+
 
 Notes & next steps
 - Replace placeholders (authors, DOI) and ensure `images/figure1.png` and `images/figure2.png` are added to the `images/` folder in the repository.
@@ -130,5 +133,6 @@ Notes & next steps
   - Convert the legacy PPT to PPTX and check slide compatibility.
 
 Contact & maintainers
-- Maintainer: [Add maintainer name and contact email]
+- Maintainer: formystudiesbtech@gmail.com
 - Last updated: 2026-02-05
+

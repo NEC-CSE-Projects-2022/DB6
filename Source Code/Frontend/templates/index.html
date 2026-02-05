@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="img" href="https://i.ibb.co/ZRrgvN1Q/logg.jpg">
+    <title>AI Vision Studio - Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.53/build/spline-viewer.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100vh;
+            width: 100%;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Spline viewer container */
+        spline-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+        }
+
+        /* Content overlay */
+        .content-overlay {
+            position: absolute;
+            z-index: 1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            padding: 4rem;
+            left: 15%; /* Increased from 10% to 15% for better spacing */
+            top: 0;
+            width: 50%;
+        }
+
+        /* Text gradient effect */
+        .text-gradient {
+            background: linear-gradient(to right, #00ffff, #4dffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.4));
+            max-width: 600px;
+        }
+
+        /* Button styles */
+        .glow-button {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.2),
+                inset 0 0 20px rgba(0, 255, 255, 0.1);
+        }
+
+        .glow-button:hover {
+            background: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.4),
+                inset 0 0 30px rgba(0, 255, 255, 0.2);
+        }
+
+        /* Navigation styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        nav .bg-black {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        /* Mobile menu styles */
+        #mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 1200px) {
+            .content-overlay {
+                left: 10%;
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #mobile-menu {
+                display: block;
+            }
+
+            .hidden {
+                display: none !important;
+            }
+
+            /* Update for mobile responsiveness */
+            .content-overlay {
+                left: 5%;
+                width: 90%;
+                padding: 2rem;
+            }
+
+            /* Add text shadow for better visibility on mobile */
+            .text-gradient, .content-overlay p {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .text-gradient {
+                font-size: 2.5rem;
+            }
+
+            .content-overlay p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-overlay {
+                padding: 1.5rem;
+            }
+
+            .text-gradient {
+                font-size: 2rem;
+            }
+
+            .glow-button {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        /* Update paragraph styles */
+        .content-overlay p {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Spline 3D Background -->
+    <spline-viewer url="https://prod.spline.design/P3cxc88Y2jLi1zr0/scene.splinecode"></spline-viewer>
+
+    <!-- Content Overlay -->
+    <div class="content-overlay">
+        <h1 class="text-gradient text-5xl md:text-6xl font-bold mb-8">
+            AI Vision Studio
+        </h1>
+        <p class="text-cyan-300 text-lg md:text-xl mb-12">
+            Experience the future of AI-powered image generation and processing
+        </p>
+        <a href="/hero#workspace" class="glow-button">
+            Enter Workspace
+        </a>
+    </div>
+
+    <script>
+        document.querySelector('.glow-button').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '/hero#workspace';
+        });
+    </script>
+</body>
+</html>

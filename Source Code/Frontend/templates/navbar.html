@@ -1,0 +1,211 @@
+<!-- Mobile hamburger button -->
+<div class="lg:hidden fixed top-4 left-4 z-50">
+    <button id="mobile-menu-btn" class="text-cyan-400 hover:text-cyan-300 p-2">
+        <i class="fas fa-bars text-2xl"></i>
+    </button>
+</div>
+
+<!-- Main Navigation -->
+<nav id="main-nav" class="bg-black/80 backdrop-blur-lg border-r border-cyan-500/10">
+    <!-- Logo Section -->
+    <div class="logo-section">
+        <a href="/" class="logo-link">
+            <img src="https://i.ibb.co/ZRrgvN1Q/logg.jpg" 
+                 alt="AI Vision Studio Logo" 
+                 class="w-10 h-10 rounded-full object-cover border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-300">
+        </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+        <a href="#home" class="nav-link text-gray-400 hover:text-cyan-300" title="Home">
+            <i class="fas fa-home text-xl"></i>
+        </a>
+        
+        <a href="#about" class="nav-link text-gray-400 hover:text-cyan-300" title="About">
+            <i class="fas fa-info-circle text-xl"></i>
+        </a>
+        
+        <a href="#workspace" class="nav-link text-gray-400 hover:text-cyan-300" title="Workspace">
+            <i class="fas fa-laptop-code text-xl"></i>
+        </a>
+        
+        <a href="#contact" class="nav-link text-gray-400 hover:text-cyan-300" title="Contact">
+            <i class="fas fa-envelope text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="https://github.com/Krupachaitanya" target="_blank" class="text-gray-400 hover:text-cyan-300" title="GitHub">
+            <i class="fab fa-github text-xl"></i>
+        </a>
+        <a href="https://x.com/chinnodu03" target="_blank" class="text-gray-400 hover:text-cyan-300" title="Twitter">
+            <i class="fab fa-twitter text-xl"></i>
+        </a>
+    </div>
+</nav>
+
+<style>
+    .nav-link {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .nav-link:hover {
+        background: rgba(0, 255, 255, 0.1);
+    }
+
+    .nav-link.active {
+        background: rgba(0, 255, 255, 0.15);
+        color: #00ffff !important;
+    }
+
+    /* Tooltip styles */
+    .nav-link::after {
+        content: attr(title);
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: #00ffff;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        margin-left: 10px;
+        border: 1px solid rgba(0, 255, 255, 0.2);
+        z-index: 9999; /* Add this line */
+        pointer-events: none; /* Add this line */
+    }
+
+    /* Add this new style for the nav link container */
+    .nav-link {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Update hover state */
+    .nav-link:hover::after {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9999;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 1024px) {
+        #main-nav {
+            transform: translateX(-100%);
+            width: 250px;
+        }
+
+        #main-nav.show {
+            transform: translateX(0);
+        }
+
+        /* Adjust nav items for mobile */
+        #main-nav .flex-col {
+            align-items: flex-start;
+            padding-left: 2rem;
+        }
+
+        #main-nav .nav-link {
+            width: 100%;
+            justify-content: flex-start;
+            padding: 0.75rem 0;
+        }
+
+        /* Adjust tooltip position for mobile */
+        .nav-link::after {
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+            margin-left: 1rem;
+            display: inline;
+            background: none;
+            border: none;
+            padding: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Bottom social links */
+        #main-nav .mt-auto {
+            padding-left: 2rem;
+        }
+
+        /* Update logo section for mobile */
+        .logo-section {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            justify-content: flex-start;
+        }
+    }
+
+    /* Add these new logo styles */
+    .logo-section {
+        margin-bottom: 3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
+    .logo-link {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .logo-link:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+    // Update mobile menu functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        
+        // Toggle menu
+        mobileMenuBtn?.addEventListener('click', () => {
+            mainNav.classList.toggle('show');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mainNav.classList.remove('show');
+            }
+        });
+
+        // Close menu when clicking a link
+        mainNav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('show');
+            });
+        });
+
+        // Update active state based on current section
+        const updateActiveLink = () => {
+            const hash = window.location.hash || '#home';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === hash);
+            });
+        };
+
+        // Update on hash change and initial load
+        window.addEventListener('hashchange', updateActiveLink);
+        updateActiveLink();
+    });
+</script>

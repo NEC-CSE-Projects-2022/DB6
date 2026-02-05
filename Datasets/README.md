@@ -1,6 +1,7 @@
-# 📁 Image Dataset — Preview & Download
+# 📁 Wang Dataset — Preview & Download
 
-![Dataset preview](./image.png)
+<img width="1090" height="579" alt="image" src="https://github.com/user-attachments/assets/bad1933b-aaca-4fe6-804f-a854113860f9" />
+
 
 > Professional dataset README for the image dataset used in this project. This file documents where to download the dataset, its structure, usage examples, acknowledgement and citation information.
 

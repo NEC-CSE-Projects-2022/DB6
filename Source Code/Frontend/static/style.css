@@ -1,0 +1,800 @@
+/* Base theme colors */
+:root {
+    --bg-primary: #000000;
+    --text-primary: #00ffff;
+    --text-secondary: rgba(0, 255, 255, 0.7);
+    --border-color: rgba(0, 255, 255, 0.1);
+    --hover-color: rgba(0, 255, 255, 0.1);
+}
+
+/* Base styles */
+html, body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* All sections background */
+section {
+    background-color: var(--bg-primary) !important;
+}
+
+/* All cards and containers */
+.glass-card,
+.workspace-section,
+.bg-white,
+.dark\:bg-gray-800,
+.bg-gray-100,
+.dark\:bg-gray-700,
+#mobile-menu,
+.glass-nav,
+footer,
+#contact-form,
+.image-preview-container {
+    background: rgba(0, 0, 0, 0.95) !important;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+/* Text colors */
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.dark\:text-gray-300,
+.dark\:text-gray-400,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
+    color: var(--text-secondary) !important;
+}
+
+/* Buttons */
+.cyan-button,
+.workspace-button,
+button[type="submit"],
+.tab-button {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    color: var(--text-primary);
+}
+
+.cyan-button:hover,
+.workspace-button:hover,
+button[type="submit"]:hover,
+.tab-button:hover {
+    background: var(--hover-color);
+    border-color: rgba(0, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Form inputs */
+input,
+textarea,
+.glass-input {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border: 1px solid rgba(0, 255, 255, 0.2) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Links */
+a {
+    color: var(--text-secondary);
+}
+
+a:hover {
+    color: var(--text-primary);
+}
+
+/* Gradient backgrounds */
+.bg-gradient-to-br,
+.from-gray-900,
+.to-gray-800 {
+    background: linear-gradient(to bottom right, #000000, #000404) !important;
+}
+
+/* Developer cards */
+.bg-gradient-to-r.from-blue-500,
+.bg-gradient-to-r.from-green-500,
+.bg-gradient-to-r.from-purple-500 {
+    background: var(--bg-primary) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* Mobile menu */
+.mobile-nav-link {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.mobile-nav-link:hover {
+    background: var(--hover-color);
+    color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 255, 0.4);
+}
+
+/* Icons */
+.fas,
+.fab {
+    color: var(--text-primary);
+}
+
+/* Loading indicators */
+.loading-indicator {
+    color: var(--text-primary);
+}
+
+/* Glow effects */
+.text-glow {
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Image containers */
+img {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-primary) !important;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Hero section */
+.hero-section {
+    background: var(--bg-primary);
+}
+
+/* Workspace sections */
+.workspace-section {
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid var(--border-color);
+}
+
+/* Contact form */
+#contact-form {
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid var(--border-color);
+}
+
+/* Particle canvas positioning */
+#particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure contact form is above particles */
+#contact-page .relative {
+    position: relative;
+    z-index: 10;
+}
+
+/* Loading animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Image hover effects */
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Button hover animations */
+.transform:hover {
+    transform: scale(1.05);
+}
+
+/* Gradient text effect */
+.bg-gradient-to-r {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom focus states */
+.focus\:ring-2:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* Mobile responsiveness enhancements */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-6xl {
+        font-size: 3rem;
+    }
+    
+    .py-20 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Dark mode specific adjustments */
+.dark {
+    color-scheme: dark;
+}
+
+/* Backdrop blur effect for contact form */
+.backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Animation for developer cards */
+.transform:hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover\:-translate-y-2:hover {
+    transform: translateY(-0.5rem);
+}
+
+/* Workspace section transitions */
+.workspace-section {
+    transition: opacity 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 
+        0 4px 24px -1px rgba(0, 255, 255, 0.05),
+        0 2px 16px -1px rgba(0, 255, 255, 0.03);
+}
+
+/* Image preview styling */
+#uploaded-image, #generated-image {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Similar images grid styling */
+#similar-images-grid img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/* Navigation link active state */
+.nav-link.text-primary-500 {
+    position: relative;
+}
+
+.nav-link.text-primary-500::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #3b82f6;
+    border-radius: 1px;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#mobile-menu.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Mobile menu backdrop */
+.mobile-menu-backdrop {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Mobile menu items hover effect */
+#mobile-menu a {
+    position: relative;
+    overflow: hidden;
+}
+
+#mobile-menu a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00ffff;
+    transition: width 0.3s ease;
+}
+
+#mobile-menu a:hover:after {
+    width: 100%;
+}
+
+/* Hamburger button styles */
+#mobile-menu-btn {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-btn:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* Mobile nav overlay */
+@media (max-width: 1024px) {
+    #main-nav::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    #main-nav.show::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Ensure nav is above other content */
+    #main-nav {
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Loading state animations */
+#text-loading, #image-loading {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hero section background animation */
+.bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #000000, #001414);
+}
+
+/* Button disabled state */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Form validation styles */
+input:invalid, textarea:invalid {
+    border-color: #ef4444;
+}
+
+input:valid, textarea:valid {
+    border-color: #10b981;
+}
+
+/* Tooltip styles for better UX */
+[title] {
+    position: relative;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Preview area transitions */
+#preview-area {
+    transition: all 0.3s ease-in-out;
+}
+
+#preview-area.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#preview-area:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Preview image loading state */
+#preview-image {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#preview-image[src=""] {
+    opacity: 0;
+}
+
+/* Generation button states */
+#genBtn:disabled {
+    cursor: not-allowed;
+}
+
+/* Landing page specific styles */
+.backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Gradient text animation */
+.bg-gradient-to-r {
+    background-size: 200% auto;
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Hover effects for feature cards */
+.bg-white.bg-opacity-5 {
+    transition: all 0.3s ease-in-out;
+}
+
+.bg-white.bg-opacity-5:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-opacity: 0.1;
+}
+
+/* Button animations */
+.transform:hover {
+    transform: scale(1.05);
+}
+
+/* Loading state for 3D model */
+spline-viewer:not(:defined) {
+    opacity: 0;
+}
+
+spline-viewer {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+/* Cyan glow effects */
+.cyan-glow {
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    color: #00ffff;
+}
+
+/* Button hover effect */
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Input focus effect */
+.focus-glow:focus {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Background animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+}
+
+/* Loading animation */
+.loading-glow {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.2),
+                     0 0 10px rgba(0, 255, 255, 0.2),
+                     0 0 15px rgba(0, 255, 255, 0.2);
+    }
+    to {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                     0 0 20px rgba(0, 255, 255, 0.4),
+                     0 0 30px rgba(0, 255, 255, 0.4);
+    }
+}
+
+/* Particle colors */
+.particle {
+    background: radial-gradient(circle at center, 
+        rgba(0, 255, 255, 0.8) 0%,
+        rgba(0, 255, 255, 0) 70%);
+}
+
+/* Footer styles */
+footer {
+    @apply bg-gray-900/80 backdrop-blur-sm border-t border-cyan-500/20 text-gray-100 py-8;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+footer .container {
+    @apply max-w-6xl mx-auto px-4 text-center;
+}
+
+footer .social-icons {
+    @apply flex items-center justify-center space-x-4 mb-4;
+}
+
+footer .social-icons a {
+    @apply text-cyan-400 hover:text-cyan-300 transition;
+}
+
+footer .copyright {
+    @apply text-sm text-cyan-200/40;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    footer .container {
+        @apply px-2;
+    }
+}
+
+/* Add these new hero section styles */
+.hero-section {
+    background: rgba(17, 17, 27, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 255, 0.05);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.36),
+        inset 0 0 80px rgba(0, 255, 255, 0.03);
+}
+
+.hero-text {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    animation: textFloat 3s ease-in-out infinite;
+}
+
+.hero-gradient {
+    background: 
+        radial-gradient(circle at 50% 0%, rgba(0, 255, 255, 0.1), transparent 50%),
+        radial-gradient(circle at 0% 50%, rgba(0, 255, 255, 0.1), transparent 50%);
+}
+
+@keyframes textFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.glass-container {
+    background: rgba(17, 17, 27, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.text-shadow-glow {
+    text-shadow: 
+        0 0 10px rgba(0, 255, 255, 0.3),
+        0 0 20px rgba(0, 255, 255, 0.2),
+        0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+/* Update text colors */
+.text-gray-600.dark\:text-gray-300 {
+    color: rgba(0, 255, 255, 0.7);
+}
+
+.text-gray-500.dark\:text-gray-400 {
+    color: rgba(0, 255, 255, 0.5);
+}
+
+/* Update section backgrounds */
+section {
+    background: #000000;
+}
+
+/* Update image preview container */
+.image-preview-container {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* Add subtle glow effects */
+.glow-effect {
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.05),
+        inset 0 0 20px rgba(0, 255, 255, 0.02);
+}
+
+/* Add or update these nav-specific styles */
+#main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    height: 100vh;
+    width: 64px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Logo section */
+#main-nav .logo-section {
+    margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation links container */
+#main-nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+/* Individual nav links */
+.nav-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Social links container */
+#main-nav .social-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1024px) {
+    #main-nav {
+        transform: translateX(-100%);
+        width: 250px;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 50;
+    }
+
+    #main-nav.show {
+        transform: translateX(0);
+    }
+
+    #main-nav .nav-links {
+        align-items: flex-start;
+        padding-left: 2rem;
+    }
+
+    .nav-link {
+        width: auto;
+        padding: 0.75rem;
+    }
+
+    #main-nav .social-links {
+        flex-direction: row;
+        padding-left: 2rem;
+        gap: 2rem;
+    }
+}
+
+/* Page transition animations */
+.page {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+.page.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+/* Update main content wrapper */
+#main-content {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Ensure content stays above transition layers */
+.page > * {
+    position: relative;
+    z-index: 1;
+}

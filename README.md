@@ -4,13 +4,13 @@
 
 ## 👥 Team Info
 
-- 22471A05O7 — **Y. Krupa Chaitanya** ( [LinkedIn](www.linkedin.com/in/krupa1030) )  
+- 22471A05O7 — **Y. Krupa Chaitanya** ( [@krupa1030](www.linkedin.com/in/krupa1030) )  
   _Work Done: Designed the overall system architecture and implemented the CLIP-based semantic embedding module. Also integrated image retrieval and text-to-image generation into a unified pipeline._
 
-- 22471A05N8 — **Sk. A. Abdul Kareem** ( [LinkedIn]() )  
+- 22471A05N8 — **Sk. A. Abdul Kareem** ( [@abdul](https://www.linkedin.com/in/shaik-anamtaram-abdul-kareem-301114288/) )  
   _Work Done: Performed dataset collection, cleaning, and preprocessing for WANG and ImageCLEF datasets. Conducted model evaluation using accuracy, precision, recall, and F1-score metrics._
 
-- 23475A0507 — **G. L. Vara Prasad** ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )  
+- 23475A0507 — **G. L. Vara Prasad** ( [@prasad](https://www.linkedin.com/in/gogineniprasadchowdary/) )  
   _Work Done: Implemented YOLOv8 for object detection and region extraction from images. Optimized FAISS indexing for fast similarity search and reduced query response time._
 
 ---
